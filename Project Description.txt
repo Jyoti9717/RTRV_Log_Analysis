@@ -1,0 +1,48 @@
+=====Description======
+
+Installed optical device on server records event logs in text form. 
+The sample text file of recorded log is availble in sample folder in uploaded project.
+
+The Log Analysis Tool has multiple features.However I have uploded one sample feature where user upload log text file and select a date and time (HH:MM) to analyse incident logs.
+
+
+
+
+Required Postman.
+I have uploaded flask app which is advisable to test with Postman.
+
+List of required libraries is mentioned in Requirement.txt file.
+
+How it works :
+Upload Test.txt(Log file) - input date and time - output file generated and saved in "/static/download_file/filename.csv
+
+
+
+How to test:
+  While testing the code 4 inputs required -
+    1- Upload Test.txt file  (Select test data from "/sample file " folder)
+    
+    2- select date(Key-"selected_date") in "yyyy-mm-dd" form  
+       example-  "2020-08-15" (test file contains single day incident log)
+      
+    3- select hours (Key -"selected_hours") in "HH" (0-23)
+       example -Hours : "01"
+    
+    4-select minutes (Key - "selected_minutes") in "MM" (1-59)
+        example - Minutes : "46"
+EXECUTE
+
+Output in csv file will be saved in "/static/download_file/"
+
+
+
+
+
+Files:
+app.py - Flask app.
+eng_log- Function that return out put in Dataframe format 
+module_function - list of functions used in module function.
+
+
+
+  
